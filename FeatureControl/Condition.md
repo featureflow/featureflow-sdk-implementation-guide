@@ -1,6 +1,6 @@
-#Operator
+#Condition
 ##Purpose
-Operators take input from the `target`, `type` and `value` and 
+Conditions take input from the `target`, `type` and `value` and 
 returns the boolean value `true` if the condition passed, or `false` if it failed.
 * `target`: a value from the context, or a predefined featureflow value like date/time
 * `type`: either `string`, `number`, or `date`. Used to describe how to interpret `value`
