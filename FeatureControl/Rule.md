@@ -37,7 +37,14 @@ for each VariantSplit{
 
 getVariantValue
 ```
-
+  int getVariantValue(String key, int seed) {
+        int h = 0;
+        for(int i = 0; i < key.length(); ++i) {
+            h = 31 * h + key.charAt(i);
+        }
+        int hash =  h ^ seed;
+        return Math.abs(hash % 100) + 1;
+    }
 ```
 
 ##Tests to write
