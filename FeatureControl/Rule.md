@@ -14,9 +14,8 @@ It exposes two methods which FeatureControl uses:
 ##Methods
 matches(context)
 ```
-    if audience == null then return true
-    else return audience.matches(context)
-   
+if audience == null then return true
+else return audience.matches(context)
 ```
 
 getVariantSplitKey(contextKey, seed)
@@ -32,7 +31,6 @@ for each VariantSplit{
     percent = percent + variantSplit.getSplit()
     if percent >= variantValue then return variantSplit.getVariantKey()
 }
-
 ```
 
 getVariantValue
