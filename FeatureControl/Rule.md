@@ -37,14 +37,10 @@ for each VariantSplit{
 
 getVariantValue
 ```
-  int getVariantValue(String key, int seed) {
-        int h = 0;
-        for(int i = 0; i < key.length(); ++i) {
-            h = 31 * h + key.charAt(i);
-        }
-        int hash =  h ^ seed;
-        return Math.abs(hash % 100) + 1;
-    }
+stringToHash = salt + ":" + featureKey + ":" + key   # stringToHash = "5:my-feature-key:username"
+hexString = sha1(stringToHash).substring(0, 15)      # hexString = "8a694775bf85e89"
+variantValue = parseInt(hexString, 16) % 100 + 1     # variantValue = 27
+return variantValue
 ```
 
 ##Tests to write
