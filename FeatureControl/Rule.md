@@ -19,9 +19,9 @@ matches(context)
    
 ```
 
-getEvaluatedVariantKey(contextKey, seed)
+getVariantSplitKey(contextKey, seed)
 1. Sets a default contextKey if none exists
-2. Generates a number between 0 and 100 for the contextKey using a hash algorithm
+2. Generates a number between 1 and 100 (inclusive) for the contextKey using a hash algorithm
 3. Iterates through the splits until the % value is greater than the generated number
 4. Return the variant associated with the split
 ```
@@ -30,7 +30,7 @@ variantValue = getVariantValue(
 percent = 0
 for each VariantSplit{
     percent = percent + variantSplit.getSplit()
-    if percent > variantValue then return variantSplit.getVariantKey()
+    if percent >= variantValue then return variantSplit.getVariantKey()
 }
 
 ```
