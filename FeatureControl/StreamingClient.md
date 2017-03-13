@@ -35,3 +35,6 @@ data == {
   "example-feature": {/* ...feature... */}
 }
 ```
+
+### Server-Sent Events
+For further reading about the spec, [W3C Server-Sent Events](https://www.w3.org/TR/2012/WD-eventsource-20120426/)
