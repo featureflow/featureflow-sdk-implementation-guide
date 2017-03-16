@@ -5,7 +5,7 @@ Implementation guide and common tests to be utilised when developing the a featu
 1. [Featureflow.md](./Implementation/1.Featureflow.md)
 2. [Featureflow Client.md](./Implementation/2.FeatureflowClient.md)
 3. [Evaluate.md](./Implementation/3.Evaluate.md)
-4. [Variant Helpers.md](./Implementation/4.EvaluateHelpers.md)
+4. [Evaluate Helpers.md](./Implementation/4.EvaluateHelpers.md)
 5. [Operators.md](./Implementation/5.Operators.md)
 6. [Streaming Client.md](./Implementation/6.StreamingClient.md)
 7. [Featureflow Events.md](./Implementation/7.FeatureflowEvents.md)
