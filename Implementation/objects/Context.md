@@ -1,9 +1,9 @@
-#Context
-###Usage
+# Context
+### Usage
 - Used to match the rules against a particular target.
 - Used to determine which split variant to evaluate.
 
-###Structure
+### Structure
 - `key` is the unique key for a particular user
 - `values` is a flat key-value object containing either a `string` or `number`, or a `string[]` or `number[]`
 
@@ -20,7 +20,7 @@ Example:
 
 This object is passed to `featureflow.evaluate('key', context)` to help the matching process.
 
-###Additional Context
+### Additional Context
 Featureflow adds additional context information for free out of the box.
 When creating the context object you must also merge the following values:
 - `featureflow.date` ISODate string of the current datetime 

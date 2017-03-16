@@ -1,7 +1,7 @@
-#Operator
-##Purpose
+# Operator
+## Purpose
 An `Operator` has one method `evaluate(contextValue, targetValues)` which should return true if the given context value satisfies the operator rule against the given targetValues
-##Functionality
+## Functionality
 Instead of an algorithm, it is easier to use this table to implement the functionality.
 
 | Operator              | Type      | Description                              
@@ -23,4 +23,4 @@ Instead of an algorithm, it is easier to use this table to implement the functio
 | `lessThanOrEqual`     | `number`  | `target` is less than or equal to the number `values[0]` *(`target <= values[0]`)*
 
 
-##Tests to write
+## Tests to write

@@ -1,8 +1,8 @@
-#FeatureControl
+# FeatureControl
 
 ---
 
-##Purpose
+## Purpose
 A **FeatureControl** contains an ordered list of **Rules** and will return the right `variant`
 of the feature for a given `context`. 
 The first **Rule** that returns `true` should be the variant that is returned.
@@ -17,7 +17,7 @@ If the **FeatureControl** is turned off, the `variant` returned should be the `o
 
 `Condition` contains `target`, `Operator` and `List<Value>`
 
-##Methods
+## Methods
 
 `evaluate(featureflowContext)` - evaluate the feature control with the given **FeatureflowContext**
 ```
@@ -33,7 +33,7 @@ for each Rule{
 }
 ```  
 ---
-##Tests to write
+## Tests to write
 ````
 testEvaluateWithDefaultRuleMatches
 testEvaluateWithDefaultRuleAndMatchingRuleMatches

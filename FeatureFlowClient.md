@@ -1,11 +1,11 @@
-#FeatureFlowClient
+# FeatureFlowClient
 
 ---
 
-##Purpose
+## Purpose
 The Featureflow Client is the main singleton object that a user will instantiate - it contains a simple facade for evaluating features
 
-##Methods
+## Methods
 **constructor**
 Users should create a single instance of this class. When it starts up it should 
 1. Register features with featureflow
@@ -42,9 +42,4 @@ The evaluate method returns a convenience object Evaluate which has four methods
 **Evaluate.is** returns true if the evaluated variant equals the given string value
   
 **Evaluate.value** returns the evaluated variant value string based on **featureflowClient.eval(featureKey, featureflowContext, failoverVariant);**
-    
 
-##Tests to write
-````
-
-````

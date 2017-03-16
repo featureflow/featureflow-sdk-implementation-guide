@@ -1,11 +1,11 @@
-#Condition
-##Purpose
+# Condition
+## Purpose
 Conditions take input from the `target`, `type` and `value` and 
 returns the boolean value `true` if the condition passed, or `false` if it failed.
 * `target`: a value from the context, or a predefined featureflow value like date/time
 * `type`: either `string`, `number`, or `date`. Used to describe how to interpret `value`
 * `values`: and array containing values that you are testing the `target` against
-##Functionality
+## Functionality
 
 matches
 
@@ -21,6 +21,6 @@ for each value in context.values{
 
 ```
 
-##Tests to write
+## Tests to write
 * Two tests for each operator/type combination that results in a return value of `false`
 * One test for each operator/type comibination that results in a return value of `true`

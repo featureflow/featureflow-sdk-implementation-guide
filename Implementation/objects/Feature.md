@@ -1,8 +1,8 @@
-#Feature
-###Usage
+# Feature
+### Usage
 - Contains the rules, conditions, and variants for a feature
 
-###Structure
+### Structure
 - `key` is the unique key for the feature
 - `variationSalt` allows for randomisation of split value calculations. Used with `VariantHelpers.getVariantSplitValue(salt, feature.key, context.key)`.
 - `enabled` boolean whether the feature is enabled 

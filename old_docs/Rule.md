@@ -1,5 +1,5 @@
-#Rule
-##Purpose
+# Rule
+## Purpose
 `Rule` contains an `Audience` and a `List<VariantSplit>`.
 
 For a given `context` check if the Audience matches and for a given `contextKey`, return the `variant` 
@@ -11,7 +11,7 @@ It exposes two methods which FeatureControl uses:
 
 
 
-##Methods
+## Methods
 matches(context)
 ```
 if audience == null then return true
@@ -46,7 +46,7 @@ def getVariantValue(hexString)
 variantValue = getVariantValue(calculateHash(5, 'myfeature', 'username')) # 27
 ```
 
-##Tests to write
+## Tests to write
 * testMatchesWhenAudienceIsNull
 * testMatchesWithAudience
 * testEvaluatedVariantKeyWithContextKeyAndTwoVariantSplits

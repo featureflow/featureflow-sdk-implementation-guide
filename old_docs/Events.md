@@ -1,8 +1,8 @@
-#Events
-##Purpose
+# Events
+## Purpose
 Used to register features and feature conversions with Featureflow.
 
-##Events
+## Events
 When a feature has been evaluated as true, an event is sent to the Featureflow servers. 
 This is used to track feature conversions.
 
@@ -23,5 +23,5 @@ eventObject = {
 }
 ```
 
-##FeatureRegistration
+## FeatureRegistration
 When initialising the featureflow client you are able to initialise features
