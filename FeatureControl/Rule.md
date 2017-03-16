@@ -32,13 +32,18 @@ for each VariantSplit{
     if percent >= variantValue then return variantSplit.getVariantKey()
 }
 ```
-
-getVariantValue
+Implementing the hash using two methods. 
+It is important to implement this using two methods so you can test that your hashing works in isolation.
 ```
-stringToHash = salt + ":" + featureKey + ":" + key   # stringToHash = "5:my-feature-key:username"
-hexString = sha1(stringToHash).substring(0, 15)      # hexString = "8a694775bf85e89"
-variantValue = parseInt(hexString, 16) % 100 + 1     # variantValue = 27
-return variantValue
+def calculateHash(salt, featureKey, key)
+  stringToHash = salt + ":" + featureKey + ":" + key   # stringToHash = "5:my-feature-key:username"
+  return sha1(stringToHash).substring(0, 15)           # hexString = "8a694775bf85e89"
+
+def getVariantValue(hexString)
+  #  This calculation must use integers, using floats will produce the wrong result
+  return parseInt(hexString, 16) % 100 + 1     
+  
+variantValue = getVariantValue(calculateHash(5, 'myfeature', 'username')) # 27
 ```
 
 ##Tests to write
