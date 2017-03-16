@@ -23,3 +23,5 @@ Note: `key`, `failoverVariant` and `variants[].key` must all match the regex `"^
   }
 ]
 ```
+
+#### [Go Back - Table of Contents](../../README.md)

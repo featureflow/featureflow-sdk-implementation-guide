@@ -4,7 +4,7 @@
 
 ### Structure
 - `key` is the unique key for the feature
-- `variationSalt` allows for randomisation of split value calculations. Used with `VariantHelpers.getVariantSplitValue(salt, feature.key, context.key)`.
+- `variationSalt` allows for randomisation of split value calculations. Used with `EvaluateHelpers.getVariantSplitValue(salt, feature.key, context.key)`.
 - `enabled` boolean whether the feature is enabled 
 - `offVariantKey` if `feature.enabled` is `false`, this is the variant that is returned
 - `rules` Array of rules that target the feature
@@ -69,3 +69,5 @@ Example:
   }
 }
 ```
+
+#### [Go Back - Table of Contents](../../README.md)
