@@ -1,39 +1,38 @@
-@ignore
 Feature: Conditions
-Scenario Outline: Test the "<operator>" operator returns a "<result>" result for a string (target: "<target>", value: "<value>", operator: "<operator>", result: "<result>")
-  Given the target is a "string" with the value of "<target>"
-  And the value is a "string" with the value of "<value>"
-  When the operator test "<operator>" is run
-  Then the output should equal "<result>"
+  Scenario Outline: Test the "<operator>" operator returns a "<result>" result for a string (target: "<target>", value: "<value>", operator: "<operator>", result: "<result>")
+    Given the target is a "string" with the value of "<target>"
+    And the value is a "string" with the value of "<value>"
+    When the operator test "<operator>" is run
+    Then the output should equal "<result>"
 
-  Examples:
-    | operator        | target        | value                  | result |
-    | equals          | my-test-value | my-test-value          | true   |
-    | equals          | my-test-value | not-my-test-value      | false  |
-    | equals          | 98            | 98                     | true   |
-    | equals          | 98            | 10                     | false  |
+    Examples:
+      | operator        | target        | value                  | result |
+      | equals          | my-test-value | my-test-value          | true   |
+      | equals          | my-test-value | not-my-test-value      | false  |
+      | equals          | 98            | 98                     | true   |
+      | equals          | 98            | 10                     | false  |
 
-    | contains        | my-test-value | -test-v                | true   |
-    | contains        | my-test-value | nope                   | false  |
-    | contains        | my-test-value | my-test-value          | true   |
-    | contains        | my-test-value | my-test-value-two      | false  |
+      | contains        | my-test-value | -test-v                | true   |
+      | contains        | my-test-value | nope                   | false  |
+      | contains        | my-test-value | my-test-value          | true   |
+      | contains        | my-test-value | my-test-value-two      | false  |
 
-    | startsWith      | my-test-value | my-test                | true   |
-    | startsWith      | my-test-value | -test-v                | false  |
-    | startsWith      | my-test-value | my-test-value          | true   |
-    | startsWith      | my-test-value | my-test-value-two      | false  |
+      | startsWith      | my-test-value | my-test                | true   |
+      | startsWith      | my-test-value | -test-v                | false  |
+      | startsWith      | my-test-value | my-test-value          | true   |
+      | startsWith      | my-test-value | my-test-value-two      | false  |
 
-    | endsWith        | my-test-value | test-value             | true   |
-    | endsWith        | my-test-value | -test-v                | false  |
-    | endsWith        | my-test-value | my-test-value          | true   |
-    | endsWith        | my-test-value | long-my-test-value     | false  |
+      | endsWith        | my-test-value | test-value             | true   |
+      | endsWith        | my-test-value | -test-v                | false  |
+      | endsWith        | my-test-value | my-test-value          | true   |
+      | endsWith        | my-test-value | long-my-test-value     | false  |
 
-    | matches         | my-test-value | my.test.+              | true   |
-    | matches         | my-test-value | wont-match             | false  |
-    | matches         | my-test-value | ^[A-z\-]+$             | true   |
-    | matches         | my-test-value | ^[A-z]+$               | false  |
+      | matches         | my-test-value | my.test.+              | true   |
+      | matches         | my-test-value | wont-match             | false  |
+      | matches         | my-test-value | ^[A-z\-]+$             | true   |
+      | matches         | my-test-value | ^[A-z]+$               | false  |
 
-    | fakeOperator    | my-test-value | doesn't matter         | false  |
+      | fakeOperator    | my-test-value | doesn't matter         | false  |
 
 
 
