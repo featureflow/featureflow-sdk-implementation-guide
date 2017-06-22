@@ -6,9 +6,9 @@ Feature: Integration
     When the feature "<feature>" is evaluated along with the context key of "<key>"
     Then the result of the evaluation should equal <result>
   Examples:
-    | feature          | key   | result                                                                                                                                                       |
-    | test-integration | user1 | true
-    | test-integration | user2 | false
+    | feature          | key   | result  |
+    | test-integration | user1 | true    |
+    | test-integration | user2 | false   |
 
   Scenario: Test that the client will throw an error when the wrong key is used
     Given there is access to the Featureflow library
