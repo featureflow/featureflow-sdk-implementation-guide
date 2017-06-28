@@ -13,13 +13,13 @@ Feature: Rules
       | <operator>      | <target>          | <values>        |
     When the rule is matched against the context
     Then the result from the match should be <result>
-  Examples:
-    | contextKey      | contextValue      | operator | target   | values            | result |
-    | role            | "beta"            | equals   | role     | ["beta"]          | true   |
-    | role            | "alpha"           | equals   | role     | ["beta"]          | false  |
-    | role            | ["beta", "alpha"] | equals   | role     | ["beta"]          | true   |
-    | role            | ["beta", "alpha"] | equals   | role     | ["alpha"]         | true   |
-    | role            | ["beta", "alpha"] | equals   | role     | ["nope"]          | false  |
+    Examples:
+      | contextKey      | contextValue      | operator | target   | values            | result |
+      | role            | "beta"            | equals   | role     | ["beta"]          | true   |
+      | role            | "alpha"           | equals   | role     | ["beta"]          | false  |
+      | role            | ["beta", "alpha"] | equals   | role     | ["beta"]          | true   |
+      | role            | ["beta", "alpha"] | equals   | role     | ["alpha"]         | true   |
+      | role            | ["beta", "alpha"] | equals   | role     | ["nope"]          | false  |
 
   Scenario: Test multiple conditions all passing will return true
     Given the context values are
