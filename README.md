@@ -13,4 +13,4 @@ Implementation guide and common tests to be utilised when developing the a featu
 Objects
 - [Feature](./Implementation/objects/Feature.md)
 - [Feature Registration](./Implementation/objects/FeatureRegistration.md)
-- [Context](./Implementation/objects/Context.md)
+- [User](./Implementation/objects/User.md)
