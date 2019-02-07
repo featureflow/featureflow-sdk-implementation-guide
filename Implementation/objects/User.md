@@ -29,7 +29,6 @@ This object is passed to `featureflow.evaluate('key', user)` to help the matchin
 ### Additional User Session Attributes
 Featureflow adds additional session attributes for free out of the box.
 When creating the user object you must also merge the following values:
-- `featureflow.date` ISODate string of the current datetime 
 - `featureflow.key` a replication of the key value at the root of the context object 
 
 Example:
@@ -38,7 +37,6 @@ Example:
   "key": "my-key",
   "sessionAttributes": {
     "featureflow.key": "my-key",
-    "featureflow.date": "2017-03-16T00:00:00.000Z"
   }
 }
 ```
